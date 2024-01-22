@@ -1,0 +1,24 @@
+body{
+  background-color: #191b1b;
+}
+#start{
+  margin: auto;
+  width: 50%;
+  border: 3px solid #ffc41b;;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container{
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+.text{
+  text-align: center;
+  color: #c5beb7;
+}
