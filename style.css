@@ -1,24 +1,69 @@
 body{
   background-color: #191b1b;
+  color: #c5beb7;
+  margin: 0;
+  padding: 0;
 }
+
 #start{
   margin: auto;
   width: 50%;
-  border: 3px solid #ffc41b;;
+  border: 3px solid #ffc41b;
   padding: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
+
 .container{
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-}
-.text{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: #c5beb7;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 50px;
+  padding: 50px;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project{
+  border: 3px solid #ffc41b;
+}
+
+img {
+  width: 100%;
+  min-height: 85%;
+  max-height: 85%; /* Set a maximum height for the images */
+  object-fit: cover; /* Ensure images cover the entire container */
+  border-bottom: 1px solid #ffc41b;
+}
+
+.animated-text{
+  overflow: hidden; /* Hide overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 3px solid #ffc41b; /* Create the typing cursor */
+  animation: typeAnimation 2s steps(20, end), blinkCursor 0.5s step-end infinite alternate;
+}
+
+@keyframes typeAnimation {
+  from{
+    width: 0;
+  }
+  to{
+    width: 24%;
+  }
+}
+
+@keyframes blinkCursor {
+  from, to{
+    border-color: transparent;
+  }
+  50%{
+    border-color: #ffc41b;
+  }
 }
